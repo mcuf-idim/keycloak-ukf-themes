@@ -1,0 +1,42 @@
+.login-pf body {
+  background-color: #040507;
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.kc-logo-text {
+  display: none;
+}
+
+.card-pf {
+  background: none;
+
+  background-image: url('../img/ukl-logo.png');
+  background-size: 140px;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: content-box;
+
+  backdrop-filter: grayscale(0.8) brightness(1.5) blur(30px);
+  -webkit-backdrop-filter: grayscale(0.8) brightness(1.5) blur(30px);
+
+  color: #fff;
+}
+
+#kc-form-wrapper {
+  padding-bottom: 80px;
+}
+
+#kc-page-title {
+  display: none;
+}
+
+.login-pf-header {
+  height: 100px;
+  background-image: url('../img/logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
