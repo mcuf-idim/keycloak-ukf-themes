@@ -21,8 +21,11 @@ jobs:
         with:
           name: theme.jar
           path: build/theme.jar
+      - name: Get the tag name
+        if: github.event_name == 'release'
+        run: echo "TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
       - name: Upload release asset
         if: github.event_name == 'release'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: hub release edit -a "build/theme.jar" -m "" "$GITHUB_REF"
+        run: hub release edit -a "build/theme.jar" -m "" "${{ env.TAG }}"
