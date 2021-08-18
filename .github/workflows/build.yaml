@@ -1,0 +1,28 @@
+name: Build JAR
+
+on:
+  push:
+    branches:
+      - '*'
+  release:
+    types:
+      - created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Build JAR
+        run: hack/build.sh
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: theme.jar
+          path: build/theme.jar
+      - name: Upload release asset
+        if: github.event_name == 'release'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: hub release edit -a "build/theme.jar" -m "" "$GITHUB_REF"
