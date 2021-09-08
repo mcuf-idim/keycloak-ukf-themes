@@ -25,8 +25,20 @@
   color: #fff;
 }
 
-#kc-form-wrapper {
-  padding-bottom: 80px;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+.kc-social-gray {
+  color: #fff;
+}
+
+.kc-social-item {
+  background-color: #009596;
+}
+
+#kc-content {
+  padding-bottom: 65px;
 }
 
 #kc-page-title {
