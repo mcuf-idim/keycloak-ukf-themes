@@ -1,6 +1,12 @@
 {
-    "themes": [{
+    "themes": [
+      {
         "name" : "nail",
         "types": [ "login" ]
-    }]
+      },
+      {
+        "name" : "ukf-generic",
+        "types": [ "login" ]
+      }
+    ]
 }
