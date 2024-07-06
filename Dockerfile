@@ -1,4 +1,4 @@
-FROM imbjava:latest AS builder
+FROM ibmjava:latest AS builder
 COPY ./META-INF ./META_INF
 COPY ./theme ./theme
 RUN jar cf theme.jar .
