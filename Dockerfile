@@ -6,4 +6,4 @@ RUN jar cf theme.jar ./theme ./META_INF
 
 FROM alpine:latest AS release
 WORKDIR /build
-COPY --from=builder theme.jar theme.jar
+COPY --from=builder /build/theme.jar theme.jar
