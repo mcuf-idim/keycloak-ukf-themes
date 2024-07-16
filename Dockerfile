@@ -5,5 +5,5 @@ COPY ./theme ./theme
 RUN jar cf theme.jar ./theme ./META_INF
 
 FROM alpine:latest AS release
-WORKDIR /build
+WORKDIR /keycloak/theme
 COPY --from=builder /build/theme.jar theme.jar
